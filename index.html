@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="results">0</h1>
+        <div style="display: flex;">
+            <button id="pause-button" type="button" onclick="playPause()"><i data-feather="pause" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8" fill="#8f00ff"></i></button>
+            <button id="restart-button" type="button" onclick="restart()"><i data-feather="refresh-cw" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8"></i></button>
+            <button id="sound-button" type="button" onclick="soundSwitch()"><i data-feather="volume-2" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8"></i></button>
+            <script>
+                feather.replace()
+            </script>
+        </div>
+    </header>
+    <div class="grid"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

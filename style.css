@@ -1,0 +1,69 @@
+body {
+  background-color: black;
+  color: #8f00ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 675px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+header button:focus {
+  outline: none;
+}
+
+.grid {
+  width: 675px;
+  height: 675px;
+  padding: 45px;
+  border: solid grey 1px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.grid div {
+  width: 45px;
+  height: 45px;
+}
+
+.invader {
+  background-image: url("./assets/invader.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.shooter {
+  background-image: url("./assets/space-ship.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.laser {
+  background-image: url("./assets/laser.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.boom {
+  background-image: url("./assets/invader.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
