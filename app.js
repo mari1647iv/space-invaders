@@ -46,6 +46,7 @@ function init() {
     isPaused = true;
     result = 0;
 
+    ppBtn.disabled = false;
 
     playPause();
 }
@@ -81,6 +82,16 @@ function stop(isWin) {
     if (isWin) { resultDiv.innerHTML = "YOU WON! CONGRATS!"; }
     else { resultDiv.innerHTML = "YOU LOSE! GAME OVER!"; }
 
+
+    ppBtn.disabled = true;
+    ppBtn.innerHTML = `<i
+    data-feather="play"
+    color="grey"
+    width = "36px"
+    height = "36px"
+    stroke-width="1.8"
+    fill="grey"></i>`;
+    feather.replace();
 }
 
 function restart() {
