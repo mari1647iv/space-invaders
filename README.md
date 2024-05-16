@@ -1,8 +1,6 @@
 # Space Invaders Player
 
-Simple Space Invaders web-player written in JavaScript during FEWD course (Fall 2021).
-
-Game was implemented using Ania Kubow's [tutorial](https://www.youtube.com/watch?v=lhNdUVh3qCc&t=2590s).
+Simple *Space Invaders* web-player written in native `JavaScript`.
 
 ## New Features Added
 

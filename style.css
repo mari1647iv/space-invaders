@@ -1,46 +1,54 @@
 body {
   background-color: black;
   color: #8f00ff;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px
 }
 
 header {
-  width: 675px;
+  width: 765px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-header button {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  margin: 10px;
+.buttons {
+  display: flex;
+  gap: 15px;
 }
 
-header button:hover {
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:hover {
   cursor: pointer;
 }
 
-header button:focus {
-  outline: none;
+button:focus-visible {
+  outline: 3px solid #8f00ff;
 }
 
-.grid {
+.container {
   width: 675px;
   height: 675px;
   padding: 45px;
-  border: solid grey 1px;
+  border: 1px solid lightgrey;
+
   display: flex;
   flex-wrap: wrap;
-  background-color: transparent;
 }
 
-.grid div {
+.container div {
   width: 45px;
   height: 45px;
+  border: 1px solid rgb(58, 58, 58);
+  box-sizing: border-box;
 }
 
 .invader {
@@ -49,7 +57,7 @@ header button:focus {
   background-repeat: no-repeat;
 }
 
-.shooter {
+.spaceship {
   background-image: url("./assets/space-ship.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -61,7 +69,7 @@ header button:focus {
   background-repeat: no-repeat;
 }
 
-.boom {
+.caught-invader {
   background-image: url("./assets/invader.png");
   background-size: contain;
   background-repeat: no-repeat;

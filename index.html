@@ -12,17 +12,22 @@
 
 <body>
     <header>
-        <h1 class="results">0</h1>
-        <div style="display: flex;">
-            <button id="pause-button" type="button" onclick="playPause()"><i data-feather="pause" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8" fill="#8f00ff"></i></button>
-            <button id="restart-button" type="button" onclick="restart()"><i data-feather="refresh-cw" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8"></i></button>
-            <button id="sound-button" type="button" onclick="soundSwitch()"><i data-feather="volume-2" color="#8f00ff" width = "36px" height = "36px" stroke-width="1.8"></i></button>
-            <script>
-                feather.replace()
-            </script>
+        <h1 class="results"></h1>
+        <div class="buttons">
+            <button id="pause-button" type="button" onclick="playPause(event)">
+                <i data-feather="pause" color="#8f00ff" width="36px" height="36px" stroke-width="1.8"
+                    fill="#8f00ff"></i>
+            </button>
+            <button id="restart-button" type="button" onclick="restart()">
+                <i data-feather="refresh-cw" color="#8f00ff" width="36px" height="36px" stroke-width="1.8"></i>
+            </button>
+            <button id="sound-button" type="button" onclick="switchSound()">
+                <i data-feather="volume-2" color="#8f00ff" width="36px" height="36px" stroke-width="1.8"></i>
+            </button>
         </div>
     </header>
-    <div class="grid"></div>
+    <div class="container"></div>
+    <script> feather.replace()</script>
     <script src="app.js"></script>
 </body>
 
