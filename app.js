@@ -17,6 +17,7 @@ const sndBtn = document.querySelector("#sound-button");
 // /*** game data 
 let invaders = [];
 let spaceship;
+let lasersTemp = new Set();
 
 let isPaused;
 let goingRight;
@@ -52,6 +53,11 @@ function init() {
 function play() {
     resultDiv.innerHTML = result;
 
+    squares.reduce((lasers, square, id) =>
+        square.classList.contains("laser") ? [...lasers, id] : lasers
+        , [])
+        .forEach(laser => { shoot(laser) });
+
     document.addEventListener("keydown", controls);
 
 
@@ -61,6 +67,7 @@ function play() {
 
 function pause() {
     clearInterval(game);
+    lasersTemp.forEach(laserShot => { clearInterval(laserShot); });
     isPaused = true;
 
     document.removeEventListener("keydown", controls);
@@ -121,17 +128,19 @@ function moveRight() {
     squares[spaceship].classList.add("spaceship");
 }
 
-function shoot() {
-    let laser = spaceship
+function shoot(laser = spaceship) {
     if (isSound) { new Audio("./assets/laser-shot.mp3").play(); }
     let laserShot = setInterval(drawLaser, 100);
+    lasersTemp.add(laserShot);
+
 
     function drawLaser() {
         squares[laser].classList.remove("laser");
         laser -= width;
 
         if (laser < 0) {
-            clearInterval(laserShot)
+            clearInterval(laserShot);
+            lasersTemp.clear(laserShot);
         }
         else if (squares[laser].classList.contains("invader")) {
             clearInterval(laserShot);
