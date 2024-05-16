@@ -130,7 +130,10 @@ function shoot() {
         squares[laser].classList.remove("laser");
         laser -= width;
 
-        if (squares[laser].classList.contains("invader")) {
+        if (laser < 0) {
+            clearInterval(laserShot)
+        }
+        else if (squares[laser].classList.contains("invader")) {
             clearInterval(laserShot);
 
             /*!*/if (isSound) { new Audio("./assets/ouch.mp3").play(); }
