@@ -47,6 +47,7 @@ function init() {
     result = 0;
 
     ppBtn.disabled = false;
+    document.addEventListener("keydown", playPauseKey);
 
     playPause();
 }
@@ -83,6 +84,7 @@ function stop(isWin) {
     else { resultDiv.innerHTML = "YOU LOSE! GAME OVER!"; }
 
 
+    document.removeEventListener("keydown", playPauseKey);
     ppBtn.disabled = true;
     ppBtn.innerHTML = `<i
     data-feather="play"
@@ -126,6 +128,12 @@ function playPause() {
 // game flow *** ***/
 
 // /*** *** game controls
+function playPauseKey(event) {
+    if (event.key === " ") {
+        event.preventDefault();
+        playPause();
+    }
+}
 
 function moveLeft() {
     squares[spaceship].classList.remove("spaceship");
