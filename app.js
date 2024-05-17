@@ -160,7 +160,6 @@ function shoot(laser = spaceship) {
         else if (squares[laser].classList.contains("invader")) {
             clearInterval(laserShot);
 
-            /*!*/if (isSound) { new Audio("./assets/ouch.mp3").play(); }
             squares[laser].classList.remove("invader");
             squares[laser].classList.add("caught-invader");
             setTimeout(() => {
