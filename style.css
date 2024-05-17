@@ -29,7 +29,7 @@ header {
 
   display: flex;
   justify-content: space-around;
-  gap: 15px;
+  gap: 30px;
 }
 
 button {
@@ -86,4 +86,19 @@ button:focus-visible {
   background-size: contain;
   background-repeat: no-repeat;
   filter: invert(1);
+}
+
+@media only screen and (min-width:800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .buttons {
+    gap: 32px;
+  }
+
+  button svg {
+    height: 48px;
+    width: 48px;
+  }
 }
