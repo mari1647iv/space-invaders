@@ -12,6 +12,7 @@ let squares = Array.from(document.querySelectorAll(".container div"));
 
 const ppBtn = document.querySelector("#pause-button");
 const sndBtn = document.querySelector("#sound-button");
+const cntrlBtns = document.querySelectorAll(".controls button");
 // setup ***/
 
 // /*** game data 
@@ -31,7 +32,7 @@ init();
 // *** utils
 // /*** *** game flow
 function init() {
-    invaders = shapes[Math.floor(Math.random() * shapes.length)]
+    invaders = shapes[Math.floor(Math.random() * shapes.length)];
     spaceship = width ** 2 - Math.ceil(width / 2);
 
     draw();
@@ -57,6 +58,8 @@ function play() {
         .forEach(laser => { shoot(laser) });
 
     document.addEventListener("keydown", controls);
+    let cntrls = [moveLeft, shoot, moveRight];
+    cntrlBtns.forEach((btn, i) => btn.onclick = () => { cntrls[i](); });
 
 
     isPaused = false;
@@ -69,6 +72,8 @@ function pause() {
     isPaused = true;
 
     document.removeEventListener("keydown", controls);
+    cntrlBtns.forEach(btn => btn.onclick = "");
+
 
     resultDiv.innerHTML = "PAUSED";
 }

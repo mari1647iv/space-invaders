@@ -21,6 +21,15 @@ header {
   gap: 15px;
 }
 
+.controls {
+  width: 765px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
 button {
   background-color: transparent;
   border: none;
