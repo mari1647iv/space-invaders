@@ -8,7 +8,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 20px
+  gap: 20px;
+
+  touch-action: manipulation;
 }
 
 header {
@@ -28,7 +30,7 @@ header {
   width: 765px;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 30px;
 }
 
@@ -44,6 +46,19 @@ button:hover {
 
 button:focus-visible {
   outline: 3px solid #8f00ff;
+}
+
+.controls button {
+  padding: 10px 70px;
+  border: 2px solid #8f00ff;
+}
+
+.controls button:first-child {
+  border-radius: 0 0 0 34px;
+}
+
+.controls button:last-child {
+  border-radius: 0 0 34px 0;
 }
 
 .container {
