@@ -5,7 +5,7 @@ Simple *Space Invaders* web-player written in native `JavaScript`.
 ## New Features Added
 
 - Sound effects
-  - Added laser and aliens sounds
+  - Added laser sounds
   - Added sound off/on button
 - Play/pause functionality
 - Restart button

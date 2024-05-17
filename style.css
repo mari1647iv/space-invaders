@@ -2,8 +2,11 @@ body {
   background-color: black;
   color: #8f00ff;
 
+  height: 90vh;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 20px
 }
@@ -23,7 +26,6 @@ header {
 
 .controls {
   width: 765px;
-  margin: 0 auto;
 
   display: flex;
   justify-content: space-around;
@@ -33,6 +35,7 @@ header {
 button {
   background-color: transparent;
   border: none;
+  touch-action: manipulation;
 }
 
 button:hover {
